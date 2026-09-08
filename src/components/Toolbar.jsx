@@ -2,7 +2,10 @@ import { storyblokEditable, StoryblokServerComponent } from "@storyblok/react/rs
 
 export default function Toolbar({ blok, ...rest }) {
   return (
-    <div {...storyblokEditable(blok)}>
+    <div
+      className="max-w-3xl mx-auto px-6 pt-8 flex flex-wrap gap-3 items-center"
+      {...storyblokEditable(blok)}
+    >
       {blok.blocks?.map((nestedBlok) => (
         <StoryblokServerComponent
           blok={nestedBlok}
