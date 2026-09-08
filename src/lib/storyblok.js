@@ -1,8 +1,17 @@
 import Page from '@/components/Page';
+import Toolbar from '@/components/Toolbar';
+import SearchBar from '@/components/SearchBar';
+import DepartmentFilter from '@/components/DepartmentFilter';
+import NavLink from '@/components/NavLink';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import JobPost from '@/components/JobPost';
+import JobList from '@/components/JobList';
 import Feature from '@/components/Feature';
 import Grid from '@/components/Grid';
 import Teaser from '@/components/Teaser';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
+
 
 export const getStoryblokApi = storyblokInit({
 	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
@@ -12,6 +21,14 @@ export const getStoryblokApi = storyblokInit({
 		feature: Feature,
 		grid: Grid,
 		teaser: Teaser,
+		"job-post": JobPost,
+		"job-list": JobList,
+		"nav-link": NavLink,
+		header: Header,
+		footer: Footer,
+		toolbar: Toolbar,
+		"search-bar": SearchBar,
+		"department-filter": DepartmentFilter,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
